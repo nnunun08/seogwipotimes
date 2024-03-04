@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.6/dist/web/static/pretendard-dynamic-subset.css");
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+Select {
+  font-family: inherit; /* 폰트 상속 */
+  // background: url(../img/btn-drop-arrow.svg) no-repeat 98% 50%;
+  /* 네이티브 화살표를 커스텀 화살표로 대체 */
+  -webkit-appearance: none;
+  /* 네이티브 외형 감추기 */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+Select::-ms-expand {
+  display: none; /* 화살표 없애기 for IE10, 11*/
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+}
+
+/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+input::-ms-clear {
+  display: none;
+}
+
+/* input type number 에서 화살표 제거 */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/*# sourceMappingURL=reset.css.map */
+
+
+html {
+  font-family: "Montserrat", "Pretendard", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, HelveticaNeue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  color: #000000;
+}
+
+body {
+  min-width: 360px;
+}
+.inner {
+  max-width: 616px;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+
+// Header.js
+.header {
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #B1D6DB;
+  .hamburger {
+    width: 80px;
+    height: 80px;
+    background: url(../public/img/hamburger.svg) center no-repeat;
+  }
+  .inner {
+    max-width: 1220px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+  }
+}
+
+
+// Article1.js
+.article1 {
+  margin-top: 63px;
+  margin-bottom: 80px;
+  .tagWrap {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    .tag {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 27px;
+      padding: 0 12px;
+      display: inline-flex;
+      border: 1px solid #000;
+      border-radius: 50px;
+      &.purple {
+        background-color: #9099FF;
+      }
+      &.pink {
+        background-color: #FF7EFC;
+      }
+    }
+  }
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+  .keyImg {
+    img {
+      width: 100%;
+    }
+    margin: 48px 0;
+  }
+  .infoBx {
+    padding: 20px;
+    border: 1px solid #000;
+    background-color: #F2F2F2;
+    box-sizing: border-box;
+    .tit {
+      font-size: 18px;
+      font-weight: bold;
+    }
+    .list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-top: 24px;
+      .item {
+        position: relative;
+        padding-left: 16px;
+        line-height: 1.5;
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 10px;
+          left: 0;
+          width: 4px;
+          height: 4px;
+          border-radius: 10px;
+          background-color: #000;
+        }
+        h3 {
+          font-size: 16px;
+          font-weight: 600;
+        }
+        p {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+.article1 + .article2 {
+  margin-top: 80px;
+}
+
+// Article2.js
+.article2 {
+  margin-top: 110px;
+
+  .titWrap {
+    border-bottom: 1px solid #FAAD33;
+    padding-bottom: 28px;
+    margin-bottom: 28px;
+  }
+  h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 12px;
+  }
+  p {
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.5;
+  }
+  &.orange {
+    h3 {
+      color: #FF7600;
+    }
+  }
+  &.blue {
+    h3 {
+      color: #3198FF;
+    }
+  }
+  &.green {
+    h3 {
+      color: #0DBC58;
+    }
+  }
+
+}
+.contents {
+  & + .contents {
+    margin-top: 80px;
+  }
+  .imgWrap {
+    text-align: right;
+    img {
+      width: 100%;
+    }
+    .caption {
+      font-size: 12px;
+      color: #707070;
+      margin-top: 4px;
+    }
+  }
+  .imgWrap + .imgWrap {
+    margin-top: 16px;
+  }
+
+  .tagWrap {
+    display: flex;
+    gap: 12px;
+    margin-top: 32px;
+    margin-bottom: 8px;
+    .tag {
+      display: none;
+      &.dog,
+      &.kiz,
+      &.obs {
+        display: inline-flex;
+      }
+      align-items: center;
+      height: 28px;
+      border-radius: 40px;
+      box-sizing: border-box;
+      border: 1px solid #707070;
+      padding: 0 12px;
+      &.dog::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../public/img/ic_dog.svg) center no-repeat;
+      }
+      &.kiz::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../public/img/ic_kiz.svg) center no-repeat;
+      }
+      &.obs::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        background: url(../public/img/ic_obs.svg) center no-repeat;
+      }
+    }
+  }
+
+  .conTit {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 24px;
+  }
+
+  .location {
+    position: relative;
+    padding-left: 20px;
+    line-height: 20px;
+    margin-bottom: 28px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: url(../public/img/ic_location.svg) center no-repeat;
+    }
+  }
+  .desc {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2;
+    margin-bottom: 28px;
+  }
+
+  .checkList {
+    padding-top: 24px;
+    border-top: 1px solid #707070;
+    .tit {
+      font-size: 16px;
+      line-height: 20px;
+      font-weight: 600;
+      padding-left: 20px;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../public/img/ic_checkList.svg) center no-repeat;
+        margin-bottom: 16px;
+      }
+    }
+    .listWrap {
+      padding-left: 20px;
+      padding-top: 16px;
+    }
+    .list {
+      font-size: 16px;
+      font-weight: 400;
+      padding-left: 20px;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../public/img/ic_check.svg) center no-repeat;
+      }
+    }
+    .list + .list {
+      margin-top: 12px;
+    }
+  }
+
+  .stayLink {
+    text-align: center;
+    margin-top: 40px;
+    .stayBtn {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 35px;
+      padding: 0 12px;
+      border-radius: 50px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+    }
+    &.orange .stayBtn{
+      background-color: #FAAD33;
+    }
+    &.blue .stayBtn{
+      background-color: #81C0FF;
+    }
+    &.green .stayBtn{
+      background-color: #5AE093;
+    }
+  }
+
+}

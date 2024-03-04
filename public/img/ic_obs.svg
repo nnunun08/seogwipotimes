@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_1244" data-name="사각형 1244" width="14.617" height="18" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_5073" data-name="그룹 5073" transform="translate(-1526 -5862)">
+    <rect id="사각형_1238" data-name="사각형 1238" width="20" height="20" transform="translate(1526 5862)" fill="none"/>
+    <g id="그룹_5091" data-name="그룹 5091" transform="translate(1528.692 5863)">
+      <g id="그룹_5090" data-name="그룹 5090" transform="translate(0 0.001)" clip-path="url(#clip-path)">
+        <path id="패스_22200" data-name="패스 22200" d="M10.288,11.81A4.957,4.957,0,1,1,5.332,6.854,4.956,4.956,0,0,1,10.288,11.81Z" transform="translate(0.045 0.814)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"/>
+        <path id="패스_22201" data-name="패스 22201" d="M9.041,2.018A1.643,1.643,0,1,1,7.4.375,1.644,1.644,0,0,1,9.041,2.018" transform="translate(0.683 0.044)" fill="#c19787"/>
+        <circle id="타원_122" data-name="타원 122" cx="1.643" cy="1.643" r="1.643" transform="translate(6.438 0.419)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"/>
+        <path id="패스_22202" data-name="패스 22202" d="M7.509,4.481a2.689,2.689,0,0,0-2.69,2.69v3.691H10.2V7.171a2.689,2.689,0,0,0-2.69-2.69" transform="translate(0.572 0.532)" fill="#ffede1"/>
+        <path id="패스_22203" data-name="패스 22203" d="M7.509,4.481a2.689,2.689,0,0,0-2.69,2.69v3.691H10.2V7.171A2.689,2.689,0,0,0,7.509,4.481Z" transform="translate(0.572 0.532)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"/>
+        <line id="선_21" data-name="선 21" y2="2.759" transform="translate(5.392 10.365)" fill="#ffede1"/>
+        <line id="선_22" data-name="선 22" y2="2.759" transform="translate(5.392 10.365)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"/>
+        <path id="패스_22204" data-name="패스 22204" d="M9.628,10.184h2.847l-.707,5.952h1.287" transform="translate(1.144 1.209)" fill="none" stroke="#707070" stroke-linecap="round" stroke-linejoin="round" stroke-width="0.75"/>
+      </g>
+    </g>
+  </g>
+</svg>
