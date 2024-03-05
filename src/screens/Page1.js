@@ -1,9 +1,12 @@
 import React from 'react';
-import Header from './component/Header'
-import Article1 from './component/Aticle1';
-import Article2 from './component/Aticle2';
-import Contents from './component/Contents';
-import CheckList from './component/CheckList';
+import Header from '../component/Header'
+import Article1 from '../component/Aticle1';
+import Article2 from '../component/Aticle2';
+import Contents from '../component/Contents';
+import CheckList from '../component/CheckList';
+import Recommend from '../component/Recommend';
+import Keyword from '../component/Keyword';
+import RecoCard from '../component/RecoCard';
 
 function Page1() {
     return <div>
@@ -31,6 +34,7 @@ function Page1() {
                 <CheckList props = {'아이와 함께 숙박도 가능하나 추가 이불은 제공하지 않으니 체크.'}/>
             ]}
             stayBtn = {`<오피스제주 사계점>에서 머물기`}
+            url= {'https://o-peace.com/38'}
         />
         <Contents 
             color = {'orange'}
@@ -44,9 +48,10 @@ function Page1() {
             desc={`유난히 햇살이 좋은 서귀포 남원의 이층집이에요. ‘슬로우 라이프’를 지향해 가꿔진 이곳은 창밖으로 펼쳐진 귤밭을 보며 서귀포의 노지 감성을 가득 채울 수 있죠. 1층인 공유 작업실과 주방이 포함된 공용 공간부터 2층인 게스트룸에 이르기까지 나무 바닥의 진동 소리를 들으며 자꾸만 두리번거리게 해요. 세컨하우스로 삼고 싶은 시골집 구석구석 감각적인 인테리어와 소품들이 메마른 감성을 채워주는 까닭이죠. 이곳의 시그니처는 각종 프로젝트를 대환영한다는 점. 호스트와 비슷한 취향을 가졌다면, 로컬 커뮤니티 활동에 참여해 보고 싶다면 똑똑 문의해 보세요. 해치지 않아요.`}
             checkList = {[
                 <CheckList props = {'내가 기획하는 소모임을 열 수 있는 대관.'}/>,
-                <CheckList props = {`인스타그램(@rapport_harye)을 통해 진행 중인 로컬 커뮤니티 소식 접하기.`}/>,
+                <div className='list'>인스타그램(<a href="https://instagram.com/rapport_harye" target='_blank'>@rapport_harye</a>)을 통해 진행 중인 로컬 커뮤니티 소식 접하기.</div>
             ]}
             stayBtn = {`<라포르하례>에서 촌캉스`}
+            url = {'https://blog.naver.com/rapport_harye/223290667770'}
         />
         <Contents 
             color = {'blue'}
@@ -57,10 +62,11 @@ function Page1() {
             location={'서귀포시 성산읍 오조리 398-10'}
             desc={`‘차와 명상에 취하다.’라는 뜻을 품은 <취다선 리조트>에서는 매일 다도와 명상, 요가 클래스가 열려요. 지금 여기, 내가 하는 일에만 온 감각을 집중하는 프로그램으로 채워져 있죠. 숙박비 내에 각 프로그램 체험비가 포함되어 날 돌보기에 어색한 이들에게 절호의 기회가 돼요. 모든 객실 창에는 푸른 바다와 저 멀리 우도까지 걸려 마음을 설레게 하는데요. 객실 내에도 다기 세트가 있으니, 자연에 취한 나만의 티타임을 연습해 보세요. 애증의 TV는 없습니다. 휴대폰도 잠시 꺼두고, 나와 더 없는 절친이 되어 보세요. `}
             checkList = {[
-                <CheckList props = {`제주 식재료로 정성을 담은 조식이 또 하나의 감동. <br> 전복죽/들깨쑥떡국/미역국/장어보양탕 중 1식 선택, 비건 옵션도 있음.`}/>,
-                <CheckList props = {`숙박은 13세 이상 가능<br>(보호자로서의 자신이 아닌 온전한 자기 자신으로 머물기 위한 목적).`}/>,
+                <CheckList props = {<>제주 식재료로 정성을 담은 조식이 또 하나의 감동. <br /> 전복죽/들깨쑥떡국/미역국/장어보양탕 중 1식 선택, 비건 옵션도 있음.</>}/>,
+                <CheckList props = {<>숙박은 13세 이상 가능<br />(보호자로서의 자신이 아닌 온전한 자기 자신으로 머물기 위한 목적).</>}/>,
             ]}
             stayBtn = {`<취다선 리조트>에 취하기`}
+            url= {'https://booking.naver.com/booking/3/bizes/197447?area=pll'}
         />
         <Contents 
             color = {'blue'}
@@ -76,6 +82,7 @@ function Page1() {
                 <CheckList props = {`’체험형’ 스테이는 주말에만 예약 가능.`}/>,
             ]}
             stayBtn = {`<약천사>로 탁탁탁`}
+            url={'https://yakchunsa.templestay.com/'}
         />
 
         <Article2
@@ -99,6 +106,7 @@ function Page1() {
                 <CheckList props = {`물을 포함한 먹거리는 자체 꼼꼼히 준비.`}/>,
             ]}
             stayBtn = {`<서귀포 자연휴양림>의 피톤치드 샤워`}
+            url={'https://www.foresttrip.go.kr/rep/or/sssn/fcfsRsrvtPssblGoodsDetls.do?hmpgId=ID02030013&menuId=001001'}
         />
         <Contents 
             color = {'green'}
@@ -115,9 +123,34 @@ function Page1() {
                 <CheckList props = {'편의 시설은 없으니, 자체 먹거리 준비.'}/>,
             ]}
             stayBtn = {`<붉은오름 자연휴양림>에서 신선 캠핑`}
+            url={'https://foresttrip.go.kr/rep/or/sssn/fcfsRsrvtPssblGoodsDetls.do?hmpgId=ID02030014&menuId=001001'}
         />
 
-        <Article1 />
+        <Recommend
+            tit={<>이 콘텐츠를 좋아하면,<br/>이것도 좋아해요.</>}
+            recoCard={[
+                <RecoCard 
+                    img = {'/img/img_rec_01.jpg'}
+                    keyword = {[
+                        <Keyword keyword={'NEWS'}/>,
+                        <Keyword keyword={'HOW-TO'}/>,
+                        <Keyword keyword={'PEOPLE'}/>,
+                        <Keyword keyword={'BRAND'}/>,
+                        <Keyword keyword={'SPACE'}/>,
+                    ]}
+                    conTit = {'서귀포에서 내 집 찾기 대작전'}
+                    desc = {<>세상에서 가장 편한 건 남의 집이 될 수 있어요.<br />용도별, 취향별 내 집 삼아 삼만리. </>}
+                />,
+                <RecoCard 
+                    img = {'/img/img_rec_02.jpg'}
+                    keyword = {[
+                        <Keyword keyword={'NEWS'}/>,
+                    ]}
+                    conTit = {'서귀포에서 내 집 찾기 대작전'}
+                    desc = {<>세상에서 가장 편한 건 남의 집이 될 수 있어요.<br />용도별, 취향별 내 집 삼아 삼만리. </>}
+                />
+            ]}
+        />
 
     </div>
 }

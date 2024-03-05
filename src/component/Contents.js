@@ -1,9 +1,8 @@
 import React from 'react';
-import CheckList from './CheckList';
 
 function Contents({
     color, img1, img2, caption, dog, kiz, obs, contTit, location,
-    desc, checkList, stayBtn
+    desc, checkList, stayBtn, url
 
     }) {
     return <>
@@ -32,7 +31,9 @@ function Contents({
                     </div>
                 </div>
                 <div className={`stayLink ${color}`}>
-                    <div className='stayBtn'>{stayBtn}</div>
+                    <a href={url} target='_blank'>
+                        <div className='stayBtn'>{stayBtn}</div>
+                    </a>
                 </div>
             </div>
         </div>
