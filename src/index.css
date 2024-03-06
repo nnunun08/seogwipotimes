@@ -142,15 +142,25 @@ body {
 .article1 .tagWrap .tag.pink {
   background-color: #FF7EFC;
 }
+.article1 .tagWrap .tag.blue {
+  background-color: #6ABAFF;
+}
+.article1 .tagWrap .tag.green {
+  background-color: #29DDB9;
+}
+.article1 .tagWrap .tag.red {
+  background-color: #FF8096;
+}
 .article1 h2 {
   font-size: 32px;
   font-weight: bold;
   margin-bottom: 8px;
 }
-.article1 p {
+.article1 .subTit {
   font-size: 20px;
   font-weight: 500;
   line-height: 1.4;
+  margin-bottom: 48px;
 }
 .article1 .keyImg {
   margin: 48px 0;
@@ -311,7 +321,7 @@ body {
   content: "";
   display: block;
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 0;
   width: 20px;
   height: 20px;
@@ -476,4 +486,61 @@ body {
 .recommend .card .desc {
   font-size: 16px;
   line-height: 1.5;
+}
+
+.article3 {
+  margin-top: 80px;
+}
+.article3 .em {
+  font-size: 18px;
+  color: #151515;
+  margin-bottom: 8px;
+}
+.article3 .tit {
+  font-size: 24px;
+  margin-bottom: 28px;
+}
+.article3 .imgWrap img {
+  width: 100%;
+}
+.article3 p {
+  margin-top: 28px;
+  font-size: 18px;
+  line-height: 2;
+  margin-bottom: 28px;
+}
+.article3 .location {
+  position: relative;
+  padding-left: 20px;
+  line-height: 20px;
+  margin-bottom: 28px;
+}
+.article3 .location::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: url(../public/img/ic_location.svg) center no-repeat;
+}
+.article3 .location {
+  line-height: 1.5;
+}
+.article3 .orderOnline {
+  text-align: center;
+  margin-top: 40px;
+}
+.article3 .orderOnline .orderBtn {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 35px;
+  padding: 0 12px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  color: #000;
+  background-color: #D9C8C2;
 }/*# sourceMappingURL=index.css.map */

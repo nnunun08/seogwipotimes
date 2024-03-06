@@ -3,7 +3,6 @@ import React from 'react';
 function Contents({
     color, img1, img2, caption, dog, kiz, obs, contTit, location,
     desc, checkList, stayBtn, url
-
     }) {
     return <>
         <div className='contents'>

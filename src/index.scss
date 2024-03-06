@@ -105,6 +105,25 @@ body {
 }
 
 
+@mixin location() {
+  .location {
+    position: relative;
+    padding-left: 20px;
+    line-height: 20px;
+    margin-bottom: 28px;
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2px;
+      left: 0;
+      width: 20px;
+      height: 20px;
+      background: url(../public/img/ic_location.svg) center no-repeat;
+    }
+  }
+  @content;
+}
 // Header.js
 .header {
   font-size: 24px;
@@ -140,12 +159,11 @@ body {
       display: inline-flex;
       border: 1px solid #000;
       border-radius: 50px;
-      &.purple {
-        background-color: #9099FF;
-      }
-      &.pink {
-        background-color: #FF7EFC;
-      }
+      &.purple {background-color: #9099FF;}
+      &.pink {background-color: #FF7EFC;}
+      &.blue {background-color: #6ABAFF;}
+      &.green {background-color: #29DDB9;}
+      &.red {background-color: #FF8096;}
     }
   }
   h2 {
@@ -153,10 +171,11 @@ body {
     font-weight: bold;
     margin-bottom: 8px;
   }
-  p {
+  .subTit {
     font-size: 20px;
     font-weight: 500;
     line-height: 1.4;
+    margin-bottom: 48px;
   }
   .keyImg {
     img {
@@ -316,23 +335,8 @@ body {
     font-weight: bold;
     margin-bottom: 24px;
   }
+  @include location;
 
-  .location {
-    position: relative;
-    padding-left: 20px;
-    line-height: 20px;
-    margin-bottom: 28px;
-    &::before {
-      content: '';
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 20px;
-      height: 20px;
-      background: url(../public/img/ic_location.svg) center no-repeat;
-    }
-  }
   .desc {
     font-size: 18px;
     font-weight: 400;
@@ -484,6 +488,51 @@ body {
     .desc {
       font-size: 16px;
       line-height: 1.5;
+    }
+  }
+}
+
+.article3 {
+  margin-top: 80px;
+  .em {
+    font-size: 18px;
+    color: #151515;
+    margin-bottom: 8px;
+  }
+  .tit {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+  .imgWrap {
+    img {
+      width: 100%;
+    }
+  }
+  p {
+    margin-top: 28px;
+    font-size: 18px;
+    line-height: 2;
+    margin-bottom: 28px;
+  }
+  @include location() {
+    .location {
+      line-height: 1.5;
+    }
+  }
+  .orderOnline {
+    text-align: center;
+    margin-top: 40px;
+    .orderBtn {
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 35px;
+      padding: 0 12px;
+      border-radius: 50px;
+      border: 1px solid #000;
+      box-sizing: border-box;
+      color: #000;
+      background-color: #D9C8C2;
     }
   }
 }
