@@ -12,16 +12,14 @@ function Page1() {
     return <div>
         <Header />
         <Article1
-            tag = {
-                <>
-                    <div className='tag purple'>TRAVEL</div>
-                    <div className='tag pink'>ACTIVITY</div>
-                </>
-            }
-            h2 = {'서귀포에서 내 집 찾기 대작전'}
+            keyword = {[
+                <Keyword keyword={'TRAVEL'}/>,
+                <Keyword keyword={'ACTIVITY'}/>,
+            ]}
+            h2 = {'체험은 역시 ‘현장빨’'}
             p = {
                 <>
-                    세상에서 가장 편한 건 남의 집이 될 수 있어요. 용도별, 취향별 내 집 삼아 삼만리.
+                    블루라이트 압박의 비대면 수업보다 오감을 자극하는 현장 체험이 자양강장제. 서귀포에서 아니면 만나기 어려움. 
                 </>
             }
             img = {

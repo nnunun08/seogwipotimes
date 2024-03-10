@@ -6,7 +6,7 @@ function Recommend({tit, recoCard}) {
             <div className='recommend'>
             <div className='inner'>
                 <div className='tit'>{tit}</div>
-                {recoCard}
+                <div className='cardWrap'>{recoCard}</div>
             </div>
         </div>
         </>

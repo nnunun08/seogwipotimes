@@ -11,13 +11,11 @@ function Page2() {
     <>
         <Header />
         <Article1
-            tag = {
-                <>
-                    <div className='tag blue'>HISTORY</div>
-                    <div className='tag green'>BRAND</div>
-                    <div className='tag red'>PEOPLE</div>
-                </>
-            }
+            keyword = {[
+              <Keyword keyword={'HISTORY'}/>,
+              <Keyword keyword={'BRAND'}/>,
+              <Keyword keyword={'PEOPLE'}/>,
+            ]}
             h2 = {'네가 ‘찐’ 노지 브랜드를 알아?'}
             p = {
                 <>

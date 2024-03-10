@@ -15,7 +15,7 @@ function Contents({
                     <img src={img2} />
                     <div className='caption'>{caption}</div>
                 </div>
-                <div className='tagWrap'>
+                <div className='itemWrap'>
                     <div className={`tag ${dog}`}>반려 (대형견X)</div>
                     <div className={`tag ${kiz}`}>키즈</div>
                     <div className={`tag ${obs}`}>장애</div>
