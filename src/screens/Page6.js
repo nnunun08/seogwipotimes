@@ -9,9 +9,6 @@ import ImgSlider from '../component/ImgSlider';
 
 function Page4() {
 
-    const style1 = {
-        marginTop : '64px'
-    }
     return <div>
         <Header />
         <Article1
@@ -24,11 +21,11 @@ function Page4() {
                 <Keyword keyword={'BRAND'}/>,
                 <Keyword keyword={'SPACE'}/>,
             ]}
-            h2 = {`한 템포 느리게, 보목마을`}
-            p = {`보목천을 젖줄로 어미의 자궁처럼 따스하게 안착한 듯한 마을. 여기에선 누구나 시간을 잊게 해요. `}
+            h2 = {`신비와 활기 사이, 신효ㆍ하효마을`}
+            p = {`효돈동이란 지붕 아래 내륙과 바다를 넘나들며 흐드러진 귤꽃의 향연. 달고 싱그럽고, 또 신비로워요. `}
             img = {
                 <>
-                    <div className='keyImg' style={style1}><img src='/img/img_25.jpg' alt="img" /></div>
+                    <div className='keyImg'><img src='/img/img_26.jpg' alt="img" /></div>
                 </>
             }
             dis = {'displayNone'}
@@ -38,48 +35,47 @@ function Page4() {
             <div className='inner'>
                 <ListGroup
                     num = {`1`}
-                    tit = {`소천지`}
-                    desc = {`백두산 천지를 축소해 놓은 듯해 붙여진 이름. 소천지에 투영된 한라산을 보며, 미니형 탑 위 돌 하나에 소원을 얹는 시간. `}
+                    tit = {`월라봉과 서귀포감귤박물관`}
+                    desc = {`매번 손이 노래질 정도로 까먹기만 했던 감귤의 탄생과 여정의 일기장 같은 박물관. 체력 보강 차원에서 월라봉 전망대도 추가. `}
                 />
                 <ListGroup
                     num = {`2`}
-                    tit = {`루씨쏜 아뜰리에`}
-                    desc = {`제주 노지 문화를 우아하게 민화로 발현한 갤러리 겸 스튜디오, 카페로 무장한 복합 문화 공간. 민화에 예술 투혼을 한 번?`}
+                    tit = {`남내소`}
+                    desc = {`신효마을과 하례마을을 가로지르는 효돈천. 효돈천 내 가장 크고 넓은 연못으로 들어가는 길 찾기는 미지로 가는 탐험 비슷. `}
                 />
                 <ListGroup
                     num = {`3`}
-                    tit = {`백주산보`}
-                    desc = {`마을 내 공간도 예술, 커피 맛도 예술인 북 카페. 사진과 영화 관련 예술 서적이 가득, 시간이 사라지는 여유는 한 보따리. `}
+                    tit = {`베케`}
+                    desc = {`봄부터 겨울까지, 계절별 자연의 추이를 생중계하는 정원 카페. 통창 바로 앞 자연을 올려다봐야 하는 바(bar)가 명당.`}
                 />
+                <div className='keyImg'><img src='/img/img_26.jpg' alt="img" /></div>
                 <ListGroup
                     num = {`4`}
-                    tit = {`구두미포구`}
-                    desc = {`제주 노지 문화를 우아하게 민화로 발현한 갤러리 겸 스튜디오, 카페로 무장한 복합 문화 공간. 민화에 예술 투혼을 한 번?`}
+                    tit = {`고요편지`}
+                    desc = {`읽고 싶은 책을 데려가 음료를 주문해도, 책방지기의 셀렉션을 탐미할 수도 있는 서점. 서귀포에 나만의 아지트를 만드는 기분은 덤.`}
                 />
                 <ListGroup
                     num = {`5`}
-                    tit = {`보목천(정수내/장술내) `}
-                    desc = {`마을의 중심부에서 동서로 나뉘는 경계선. 동쪽 동네는 어업, 서쪽 동네는 농업 위주. 자연에 기반한 생활상 탐미 포인트. `}
+                    tit = {`게우지코지ㆍ생이돌`}
+                    desc = {`전복 내장(제주어로 ‘게읏’)을 닮은 게우지코지와 이를 발판으로 두 개의 암석이 우뚝 솟아 새(제주어로 ‘생이’)의 쉼터가 되는 생이돌(제주어로 ‘생이’). 가슴이 뻥 뚫림.`}
                 />
-                <ListGroup
-                    num = {`6`}
-                    tit = {`보목포구`}
-                    desc = {`제주 노지 문화를 우아하게 민화로 발현한 갤러리 겸 스튜디오, 카페로 무장한 복합 문화 공간. 민화에 예술 투혼을 한 번?`}
-                />
-                <ListGroup
-                    num = {`7`}
-                    tit = {`제지기오름(재지기오름/절오름) `}
-                    desc = {`나무 사이에 걸린 보목포구, 섶섬의 풍경화를 내어주는 해발 92m의 전망대. 왕복 약 20~30분 정도의 난이도 낮은 오름으로, 아이와의 산책길로 도전 가능.`}
-                />
+                <div class="listGroup">
+                    <div class="listTit">
+                        <span class="num">6</span>
+                        <span class="num">7</span>
+                        <div class="tit">소금막 나무정자ㆍ하효항</div>
+                    </div>
+                    <div class="listDesc">신효마을과 하례마을을 가로지르는 효돈천. 효돈천 내 가장 크고 넓은 연못으로 들어가는 길 찾기는 미지로 가는 탐험 비슷. </div>
+                </div>
                 <ListGroup
                     num = {`8`}
-                    tit = {`섶섬`}
-                    desc = {`포구 앞바다 1km 지점. 잘 깎인 바위가 불시착한 듯한 이 무인도엔 450종의 난대림이 귀한 생을 이어가는 중. 천연기념물 제18호.`}
+                    tit = {`쇠소깍ㆍ소금막검은모래해변`}
+                    desc = {`효돈천의 담수와 해수의 운명적인 만남 장소로, 일석다조의 터지는 즐거움. 기암괴석 위로 강건히 자란 송림 아래 하천을 유랑하거나 손가락 사이로 부스스 빠지는 검은 모래놀이를 하거나.`}
                 />
                 <ListGroup
                     num = {`9`}
-                    tit = {`제주 올레 6코스 `}
-                    desc = {`쇠소깍에서 제주올레 여행자 센터로 이어지는 11km의 올레 관통. 제지기오름에서 보목/구두미 포구 해안 길을 관통해 소천지까지 원스톱 추천. `}
+                    tit = {`트멍길`}
+                    desc = {`제주올레 6코스를 포함해 효돈동이 뽐내는 9경을 특화시킨 ‘트멍길’. 쇠소깍 다리에서 게우지코지까지 약 10.83km, 3~4시간이 소요되는 동네 크게 한 바퀴. 스탬프 투어 완주 시 협업한 카페나 식당의 할인 혜택도.`}
                 />
             </div>
         </div>
@@ -98,13 +94,13 @@ function Page4() {
 
         <div className='postImg'>
             <div className='inner'>
-                <img src='/img/img_post01.jpg' alt='img'/>
+                <img src='/img/img_post02.jpg' alt='img'/>
             </div>
         </div>
 
         <div className='contents3'>
             <div className='inner'>
-                <h3>신효ㆍ하효마을의 가치 하나둘셋 </h3>
+                <h3>신효ㆍ하효마을의 가치 하나둘셋  </h3>
                 <h4>남내소vs쇠소깍, 효돈천의 두 얼굴</h4>
                 <p>쇠소깍이란 유명세에 가려져 있지만, 사실 그 어미는 한라산에서 발원한 13km의 효돈천이에요. 효돈천 줄기의 하류에 있으면서 해수와 만나는 옛 천연 포구가 바로 쇠소깍이죠. 그 상류엔 또 다른 비경으로 알려진 남내소가 숨어 있어요. 정글 길을 짧게 내려가면 기꺼이 하늘의 거울이 되어버린 하천과 수중 동굴 등을 탐험하는 암반 트래킹이 가능하죠. 깊은 계곡 속에서의 적막, 멈춤의 시간을 허락해요. 유네스코 제주도 생물권보전지역으로 지정된 효돈천의 광활함을 맞이했으니, 이제 자연의 디테일을 탐미하러 가요. </p>
             </div>
@@ -114,8 +110,8 @@ function Page4() {
             <div className='inner'>
                 <ImgSlider
                     obj = {[
-                        <div><img src='/img/slide_01.jpg' alt='slideImg'/></div>,
-                        <div><img src='/img/slide_01.jpg' alt='slideImg'/></div>
+                        <div><img src='/img/slide_04.jpg' alt='slideImg'/></div>,
+                        <div><img src='/img/slide_04.jpg' alt='slideImg'/></div>
                     ]}
                 />
             </div>
@@ -132,8 +128,8 @@ function Page4() {
             <div className='inner'>
                 <ImgSlider
                     obj = {[
-                        <div><img src='/img/slide_02.jpg' alt='slideImg'/></div>,
-                        <div><img src='/img/slide_02.jpg' alt='slideImg'/></div>
+                        <div><img src='/img/slide_05.jpg' alt='slideImg'/></div>,
+                        <div><img src='/img/slide_05.jpg' alt='slideImg'/></div>
                     ]}
                 />
             </div>
@@ -150,8 +146,8 @@ function Page4() {
             <div className='inner'>
                 <ImgSlider
                     obj = {[
-                        <div><img src='/img/slide_03.jpg' alt='slideImg'/></div>,
-                        <div><img src='/img/slide_03.jpg' alt='slideImg'/></div>
+                        <div><img src='/img/slide_06.jpg' alt='slideImg'/></div>,
+                        <div><img src='/img/slide_06.jpg' alt='slideImg'/></div>
                     ]}
                 />
             </div>

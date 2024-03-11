@@ -150,16 +150,42 @@ body {
   justify-content: space-between;
   flex-wrap: wrap;
   padding: 0 30px;
+  transition: 0.3s;
 }
 .header .left {
   display: flex;
   align-items: center;
   gap: 56px;
+  transition: 0.3s;
 }
 .header .tit {
   font-weight: 800;
 }
+@media screen and (max-width: 768px) {
+  .header .inner {
+    padding: 0 20px;
+  }
+  .header .left {
+    gap: 30px;
+  }
+}
 
+.d-pc {
+  display: block !important;
+}
+
+.d-mobile {
+  display: none !important;
+}
+
+@media screen and (max-width: 768px) {
+  .d-pc {
+    display: none !important;
+  }
+  .d-mobile {
+    display: block !important;
+  }
+}
 .search {
   position: relative;
 }
@@ -192,9 +218,14 @@ body {
   transform: translateY(-50%);
   text-indent: -9999px;
   overflow: hidden;
+  transition: 0.3s;
+}
+.search.d-mobile .btn {
+  right: 0;
 }
 
 .article1 {
+  transition: 0.3s;
   margin-top: 63px;
   margin-bottom: 80px;
 }
@@ -293,6 +324,11 @@ body {
 }
 .article1 .infoBx .list .item p {
   font-size: 16px;
+}
+@media screen and (max-width: 768px) {
+  .article1 {
+    margin-top: 36px;
+  }
 }
 
 .article1 + .article2 {
@@ -713,9 +749,31 @@ body {
   margin-top: -80px;
   padding-top: 28px;
 }
+.listGroupWrap .keyImg {
+  margin-top: 80px;
+  margin-bottom: 28px;
+}
+.listGroupWrap .keyImg img {
+  width: 100%;
+}
+.listGroupWrap .badgeLink {
+  margin: 24px 0;
+}
+.listGroupWrap .badgeLink a {
+  padding: 8px 12px;
+  border: 1px solid #000;
+  border-radius: 30px;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #3198FF;
+  text-decoration: none;
+}
 
 .listGroup {
   font-size: 18px;
+  font-family: "Pretendard";
+  line-height: 1.5;
 }
 .listGroup + .listGroup {
   margin-top: 24px;
@@ -727,6 +785,7 @@ body {
   margin-bottom: 8px;
 }
 .listGroup .listTit .num {
+  font-family: "Pretendard";
   width: 20px;
   height: 20px;
   display: inline-flex;
@@ -737,6 +796,9 @@ body {
   color: #fff;
   font-size: 17px;
   font-weight: bold;
+}
+.listGroup .listTit .num + .num {
+  margin-left: -4px;
 }
 .listGroup .listTit .tit {
   font-weight: bold;
@@ -808,4 +870,16 @@ body {
 .contents3 p {
   font-size: 18px;
   line-height: 2;
+}
+.contents3 .insta {
+  font-family: "Pretendard";
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #707070;
+  padding-left: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  background: url(../public/img/ic_insta.svg) left center/32px no-repeat;
 }/*# sourceMappingURL=index.css.map */

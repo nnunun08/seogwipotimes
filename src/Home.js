@@ -22,6 +22,8 @@ function Home() {
             <li style={li}><Link to='/Page3'>다시 태어났어, 월별 제주어 럭키 리추얼</Link></li>
             <li style={li}><Link to='/Page4'>체험은 역시 ‘현장빨’</Link></li>
             <li style={li}><Link to='/Page5'>한 템포 느리게, 보목마을</Link></li>
+            <li style={li}><Link to='/Page6'>신비와 활기 사이, 신효ㆍ하효마을</Link></li>
+            <li style={li}><Link to='/Page7'>꿈틀꿈틀 동력, 하례1리ㆍ하례2리마을</Link></li>
         </ul>
     ) 
 }

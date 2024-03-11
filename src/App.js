@@ -5,6 +5,8 @@ import Page2 from './screens/Page2';
 import Page3 from './screens/Page3';
 import Page4 from './screens/Page4';
 import Page5 from './screens/Page5';
+import Page6 from './screens/Page6';
+import Page7 from './screens/Page7';
 
 function App() {
   return (
@@ -16,6 +18,8 @@ function App() {
         <Route path='/Page3' Component={Page3} exact />
         <Route path='/Page4' Component={Page4} exact />
         <Route path='/Page5' Component={Page5} exact />
+        <Route path='/Page6' Component={Page6} exact />
+        <Route path='/Page7' Component={Page7} exact />
       </Routes>
     </div>
   );
