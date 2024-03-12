@@ -41,9 +41,9 @@ function Page3() {
             />
             
             <div className='inner380'>
-            <div className='inner'>
-                <img className='fullImg' src='/img/img_jejuLangCon.jpg' alt='imgJejuLang' />
-            </div>
+                <div className='inner'>
+                    <img className='fullImg' src='/img/img_jejuLangCon.jpg' alt='imgJejuLang' />
+                </div>
             </div>
             <Recommend
                 tit={<>이 콘텐츠를 좋아하면,<br/>이것도 좋아해요.</>}

@@ -100,15 +100,22 @@ body {
 
 .displayNone {display:none !important}
  
+@mixin lineClamp($count : 2) {
+  -webkit-line-clamp: $count;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
 
-@mixin keyword {
+@mixin keyword($fonstSize:14) {
   .keyword {
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
-    max-width: 340px;
+    // max-width: 340px;
     .item {
-      font-size: 12px;
+      font-size: $fonstSize + px;
       font-weight: 500;
       line-height: 19px;
       padding: 0 8px;
@@ -137,6 +144,7 @@ body {
   }
 }
 @include inner;
+
 .inner380 {
     @include inner {
       max-width: 410px;
@@ -160,6 +168,12 @@ body {
       width: 100%;
       margin: 0;
     }
+}
+.inner1220 {
+  max-width: 1220px;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
 
@@ -356,6 +370,13 @@ body {
   }
   @media screen and (max-width:768px) {
     margin-top: 36px;
+    margin-bottom: 45px;
+    h2 {
+      margin-bottom: 4px;
+    }
+    .subTit {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -871,5 +892,165 @@ body {
     display: flex;
     align-items: center;
     background: url(../public/img/ic_insta.svg) left center/32px no-repeat;
+  }
+}
+
+.cardView {
+  $gapY : 40px;
+  $gapX : 20px;
+  margin-bottom: 60px;
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gapY $gapX;
+    max-width: 1220px;
+  }
+  .card {
+    width: calc((100% - $gapX * 2) / 3);
+    padding: 10px 10px 20px 10px;
+    border-radius: 16px;
+    background-color: #EAEAEA;
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    transition: transform 0.3s ease-out 0s;
+    &:hover {
+      transform: translateY(-16px);
+    }
+    .imgWrap {
+      aspect-ratio: 364/273;
+      border-radius: 12px;
+      overflow: hidden;
+      position: relative;
+      margin-bottom: 12px;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+      .badgeWrap {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        display: flex;
+        .badge {
+          width: 28px;
+          height: 28px;
+          &.kiz {background: url(../public/img/ic_badge_kiz.png) center no-repeat;}
+        }
+      }
+    }
+    .keywordWrap {
+      min-height: 52px;
+    }
+    @include keyword();
+    h3 {
+      font-family: 'Pretendard';
+      margin-top: 16px;
+      min-height: 60px;
+      font-size: 24px;
+      line-height: 30px;
+      font-weight: bold;
+      margin-bottom: 4px;
+      @include lineClamp;
+    }
+    p {
+      font-family: 'Pretendard';
+      font-size: 16px;
+      line-height: 1.5;
+      @include lineClamp;
+    }
+    &.card2 {
+      width: calc((100% - $gapX * 2) / 2);
+      h3 {
+        min-height: initial;
+      }
+    }
+  }
+  @media screen and (max-width:768px) {
+    $gapY : 20px;
+    .inner {
+      row-gap: $gapY;
+      .card {
+        width: 100%;
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+  }
+}
+
+.tab {
+  [class*="inner"] {
+    overflow: auto;
+  }
+  @include keyword(18) {
+    min-height: 31px;
+    flex-wrap: nowrap;
+
+    .item.NEWS,
+    .item.BRAND,
+    .item.TRAVEL,
+    .item.ACTIVITY,
+    .item.HISTORY,
+    .item.HOW-TO,
+    .item.PEOPLE,
+    .item.SPACE,
+    .item.MAP {
+      background-color: transparent;  
+    }
+    .item.NEWS:hover,.ac.NEWS {background-color: #FFDB43;}
+    .item.BRAND:hover,.ac.BRAND {background-color: #29DDB9;}
+    .item.TRAVEL:hover,.ac.TRAVEL {background-color: #9099FF;}
+    .item.ACTIVITY:hover,.ac.ACTIVITY {background-color: #FF7EFC;}
+    .item.HISTORY:hover,.ac.HISTORY {background-color: #6ABAFF;}
+    .item.HOW-TO:hover,.ac.HOW-TO {background-color: #B4FA6B;}
+    .item.PEOPLE:hover,.ac.PEOPLE {background-color: #FF8096;}
+    .item.SPACE:hover,.ac.SPACE {background-color: #A7E8F4;}
+    .item.MAP:hover,.ac.SPACE {background-color: #FF9055;}
+    
+    .item {
+      white-space: nowrap;
+      height: 30px;
+      line-height: 30px;
+      padding: 0 12px;
+      cursor: pointer;
+      box-sizing: border-box;
+    }
+  }
+  margin-top: 83px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  @media screen and (max-width:768px) {
+    margin-top: 36px;
+
+  }
+}
+
+.cateTit {
+  h2 {
+    font-family: 'Pretendard';
+    font-size: 48px;
+    line-height: 58px;
+    font-weight: bold;
+    margin-bottom: 4px;
+    transition: 0.3s;
+  }
+  h3 {
+    font-family: 'Pretendard';
+    font-size: 28px;
+    line-height: 37px;
+    margin-bottom: 48px;
+    transition: 0.3s;
+  }
+  @media screen and (max-width:768px) {
+    h2 {
+      font-size: 32px;
+      line-height: 38px;
+    }
+    h3 {
+      font-size: 20px;
+      margin-bottom: 45px;
+    }
   }
 }

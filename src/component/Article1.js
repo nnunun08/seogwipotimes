@@ -1,9 +1,9 @@
 import React from 'react';
 
-function Article1({keyword, h2, p, img, tit, item, dis}) {
+function Article1({keyword, h2, p, img, tit, item, dis, inner='inner'}) {
     return <>
         <div className='article1'>
-            <div className="inner">
+            <div className={inner}>
                 <div class="keyword">{keyword}</div>
                 <h2>{h2}</h2>
                 <p className='subTit'>{p}</p>

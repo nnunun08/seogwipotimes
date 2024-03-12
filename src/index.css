@@ -130,6 +130,13 @@ body {
   margin: 0;
 }
 
+.inner1220 {
+  max-width: 1220px;
+  padding: 0 15px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
 .header {
   font-size: 24px;
   font-weight: bold;
@@ -233,11 +240,10 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  max-width: 340px;
   margin-bottom: 24px;
 }
 .article1 .keyword .item {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 19px;
   padding: 0 8px;
@@ -328,6 +334,13 @@ body {
 @media screen and (max-width: 768px) {
   .article1 {
     margin-top: 36px;
+    margin-bottom: 45px;
+  }
+  .article1 h2 {
+    margin-bottom: 4px;
+  }
+  .article1 .subTit {
+    margin-bottom: 0;
   }
 }
 
@@ -640,10 +653,9 @@ body {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  max-width: 340px;
 }
 .recommend .card .keyword .item {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
   line-height: 19px;
   padding: 0 8px;
@@ -882,4 +894,260 @@ body {
   display: flex;
   align-items: center;
   background: url(../public/img/ic_insta.svg) left center/32px no-repeat;
+}
+
+.cardView {
+  margin-bottom: 60px;
+}
+.cardView .inner {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px 20px;
+  max-width: 1220px;
+}
+.cardView .card {
+  width: calc((100% - 40px) / 3);
+  padding: 10px 10px 20px 10px;
+  border-radius: 16px;
+  background-color: #EAEAEA;
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  transition: transform 0.3s ease-out 0s;
+}
+.cardView .card:hover {
+  transform: translateY(-16px);
+}
+.cardView .card .imgWrap {
+  aspect-ratio: 364/273;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 12px;
+}
+.cardView .card .imgWrap img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.cardView .card .imgWrap .badgeWrap {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+}
+.cardView .card .imgWrap .badgeWrap .badge {
+  width: 28px;
+  height: 28px;
+}
+.cardView .card .imgWrap .badgeWrap .badge.kiz {
+  background: url(../public/img/ic_badge_kiz.png) center no-repeat;
+}
+.cardView .card .keywordWrap {
+  min-height: 52px;
+}
+.cardView .card .keyword {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.cardView .card .keyword .item {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 0 8px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.cardView .card .keyword .item.NEWS {
+  background-color: #FFDB43;
+}
+.cardView .card .keyword .item.BRAND {
+  background-color: #29DDB9;
+}
+.cardView .card .keyword .item.TRAVEL {
+  background-color: #9099FF;
+}
+.cardView .card .keyword .item.ACTIVITY {
+  background-color: #FF7EFC;
+}
+.cardView .card .keyword .item.HISTORY {
+  background-color: #6ABAFF;
+}
+.cardView .card .keyword .item.HOW-TO {
+  background-color: #B4FA6B;
+}
+.cardView .card .keyword .item.PEOPLE {
+  background-color: #FF8096;
+}
+.cardView .card .keyword .item.SPACE {
+  background-color: #A7E8F4;
+}
+.cardView .card h3 {
+  font-family: "Pretendard";
+  margin-top: 16px;
+  min-height: 60px;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+.cardView .card p {
+  font-family: "Pretendard";
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+}
+.cardView .card.card2 {
+  width: calc((100% - 40px) / 2);
+}
+.cardView .card.card2 h3 {
+  min-height: initial;
+}
+@media screen and (max-width: 768px) {
+  .cardView .inner {
+    row-gap: 20px;
+  }
+  .cardView .inner .card {
+    width: 100%;
+  }
+  .cardView .inner .card:hover {
+    transform: none;
+  }
+}
+
+.tab {
+  margin-top: 83px;
+  margin-bottom: 20px;
+  transition: 0.3s;
+}
+.tab [class*=inner] {
+  overflow: auto;
+}
+.tab .keyword {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  min-height: 31px;
+  flex-wrap: nowrap;
+}
+.tab .keyword .item {
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 19px;
+  padding: 0 8px;
+  border-radius: 50px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+}
+.tab .keyword .item.NEWS {
+  background-color: #FFDB43;
+}
+.tab .keyword .item.BRAND {
+  background-color: #29DDB9;
+}
+.tab .keyword .item.TRAVEL {
+  background-color: #9099FF;
+}
+.tab .keyword .item.ACTIVITY {
+  background-color: #FF7EFC;
+}
+.tab .keyword .item.HISTORY {
+  background-color: #6ABAFF;
+}
+.tab .keyword .item.HOW-TO {
+  background-color: #B4FA6B;
+}
+.tab .keyword .item.PEOPLE {
+  background-color: #FF8096;
+}
+.tab .keyword .item.SPACE {
+  background-color: #A7E8F4;
+}
+.tab .keyword .item.NEWS,
+.tab .keyword .item.BRAND,
+.tab .keyword .item.TRAVEL,
+.tab .keyword .item.ACTIVITY,
+.tab .keyword .item.HISTORY,
+.tab .keyword .item.HOW-TO,
+.tab .keyword .item.PEOPLE,
+.tab .keyword .item.SPACE,
+.tab .keyword .item.MAP {
+  background-color: transparent;
+}
+.tab .keyword .item.NEWS:hover, .tab .keyword .ac.NEWS {
+  background-color: #FFDB43;
+}
+.tab .keyword .item.BRAND:hover, .tab .keyword .ac.BRAND {
+  background-color: #29DDB9;
+}
+.tab .keyword .item.TRAVEL:hover, .tab .keyword .ac.TRAVEL {
+  background-color: #9099FF;
+}
+.tab .keyword .item.ACTIVITY:hover, .tab .keyword .ac.ACTIVITY {
+  background-color: #FF7EFC;
+}
+.tab .keyword .item.HISTORY:hover, .tab .keyword .ac.HISTORY {
+  background-color: #6ABAFF;
+}
+.tab .keyword .item.HOW-TO:hover, .tab .keyword .ac.HOW-TO {
+  background-color: #B4FA6B;
+}
+.tab .keyword .item.PEOPLE:hover, .tab .keyword .ac.PEOPLE {
+  background-color: #FF8096;
+}
+.tab .keyword .item.SPACE:hover, .tab .keyword .ac.SPACE {
+  background-color: #A7E8F4;
+}
+.tab .keyword .item.MAP:hover, .tab .keyword .ac.SPACE {
+  background-color: #FF9055;
+}
+.tab .keyword .item {
+  white-space: nowrap;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 12px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 768px) {
+  .tab {
+    margin-top: 36px;
+  }
+}
+
+.cateTit h2 {
+  font-family: "Pretendard";
+  font-size: 48px;
+  line-height: 58px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  transition: 0.3s;
+}
+.cateTit h3 {
+  font-family: "Pretendard";
+  font-size: 28px;
+  line-height: 37px;
+  margin-bottom: 48px;
+  transition: 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .cateTit h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .cateTit h3 {
+    font-size: 20px;
+    margin-bottom: 45px;
+  }
 }/*# sourceMappingURL=index.css.map */
