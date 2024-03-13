@@ -19,6 +19,7 @@ import Cate6 from './screens/Cate6';
 import Cate7 from './screens/Cate7';
 import Cate8 from './screens/Cate8';
 import Cate9 from './screens/Cate9';
+import Main from './screens/Main';
 
 function App() {
   return (
@@ -44,6 +45,7 @@ function App() {
         <Route path='/Cate7' Component={Cate7} exact />
         <Route path='/Cate8' Component={Cate8} exact />
         <Route path='/Cate9' Component={Cate9} exact />
+        <Route path='/Main' Component={Main} exact />
       </Routes>
     </div>
   );

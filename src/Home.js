@@ -37,6 +37,7 @@ function Home() {
             <li style={li}><Link to='/Cate7'>메뉴_MAP</Link></li>
             <li style={li}><Link to='/Cate8'>메뉴_SPACE</Link></li>
             <li style={li}><Link to='/Cate9'>메뉴_TRAVEL</Link></li>
+            <li style={li}><Link to='/Main'>메인</Link></li>
         </ul>
     ) 
 }
