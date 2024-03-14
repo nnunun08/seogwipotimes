@@ -38,6 +38,12 @@ function Home() {
             <li style={li}><Link to='/Cate8'>메뉴_SPACE</Link></li>
             <li style={li}><Link to='/Cate9'>메뉴_TRAVEL</Link></li>
             <li style={li}><Link to='/Main'>메인</Link></li>
+
+            <li style={li}><Link to='/Page8'>그들이 서귀포를 택할 수밖에</Link></li>
+            <li style={li}><Link to='/Page9'>이것이야말로 노지 매너!</Link></li>
+            <li style={li}><Link to='/Page10'>힙하게 변했어요, 공간의 재탄생</Link></li>
+            <li style={li}><Link to='/Page11'>2023 문화도시 서귀포가 남긴 것 BEST 6</Link></li>
+            <li style={li}><Link to='/Page12'>걸음마다 짭조름하게, 송산서귀마을</Link></li>
         </ul>
     ) 
 }

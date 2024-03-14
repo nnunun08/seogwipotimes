@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ListGroup ({num, tit, desc}) {
+function ListGroup ({num, tit, desc, etc}) {
     return (<>
         <div className='listGroup'>
             <div className='listTit'>
@@ -8,6 +8,7 @@ function ListGroup ({num, tit, desc}) {
                 <div className='tit'>{tit}</div>
             </div>
             <div className='listDesc'>{desc}</div>
+            {etc}
         </div>
     </>)
 }

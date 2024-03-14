@@ -1,13 +1,14 @@
 import React from 'react';
 
 function Contents2({
-    cate, img1, img2, caption1, caption2, dog='dog', kiz='kiz', obs='obs', info, contTit, desc1, desc2, etc=false
+    cate, img1, img2, caption1, caption2, dog='dog', kiz='kiz', obs='obs', info, contTit, desc1, desc2, etc=false, imgSlide
     }) {
     return <>
         <div className='contents contents2'>
             <div className='inner'>
                 {cate}
                 <div className='conTit'>{contTit}</div>
+                {imgSlide}
                 <div className='itemWrap'>
                     <div className={`tag ${dog}`}>반려</div>
                     <div className={`tag ${kiz}`}>키즈</div>

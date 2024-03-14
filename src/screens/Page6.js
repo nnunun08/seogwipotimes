@@ -7,7 +7,7 @@ import RecoCard from '../component/RecoCard';
 import ListGroup from '../component/ListGroup';
 import ImgSlider from '../component/ImgSlider';
 
-function Page4() {
+function Page6() {
 
     return <div>
         <Header />
@@ -185,4 +185,4 @@ function Page4() {
     </div>
 }
 
-export default Page4;
+export default Page6;
