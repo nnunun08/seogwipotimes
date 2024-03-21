@@ -59,13 +59,13 @@ function Page6() {
                     tit = {`게우지코지ㆍ생이돌`}
                     desc = {`전복 내장(제주어로 ‘게읏’)을 닮은 게우지코지와 이를 발판으로 두 개의 암석이 우뚝 솟아 새(제주어로 ‘생이’)의 쉼터가 되는 생이돌(제주어로 ‘생이’). 가슴이 뻥 뚫림.`}
                 />
-                <div class="listGroup">
-                    <div class="listTit">
-                        <span class="num">6</span>
-                        <span class="num">7</span>
-                        <div class="tit">소금막 나무정자ㆍ하효항</div>
+                <div className="listGroup">
+                    <div className="listTit">
+                        <span className="num">6</span>
+                        <span className="num">7</span>
+                        <div className="tit">소금막 나무정자ㆍ하효항</div>
                     </div>
-                    <div class="listDesc">신효마을과 하례마을을 가로지르는 효돈천. 효돈천 내 가장 크고 넓은 연못으로 들어가는 길 찾기는 미지로 가는 탐험 비슷. </div>
+                    <div className="listDesc">신효마을과 하례마을을 가로지르는 효돈천. 효돈천 내 가장 크고 넓은 연못으로 들어가는 길 찾기는 미지로 가는 탐험 비슷. </div>
                 </div>
                 <ListGroup
                     num = {`8`}

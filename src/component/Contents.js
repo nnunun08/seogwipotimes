@@ -7,11 +7,11 @@ function Contents({
     return <>
         <div className='contents'>
             <div className='inner'>
-                <div class="imgWrap">
+                <div className="imgWrap">
                     <img src={img1} />
                     <div className='caption'>{caption}</div>
                 </div>
-                <div class="imgWrap">
+                <div className="imgWrap">
                     <img src={img2} />
                     <div className='caption'>{caption}</div>
                 </div>

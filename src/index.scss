@@ -98,10 +98,57 @@ body {
   min-width: 360px;
 }
 
+.slick-slide img {
+  width: 100%;
+}
+
+.conTit {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+}
+
 .displayNone {display:none !important}
 
 $s1 : 8px;
 $s2 : 16px;
+
+@mixin DetailInfo() {
+  .detailInfo {
+    padding-top: 12px;
+    border-top: 1px solid #707070;
+    table {
+      table-layout: fixed;
+      width: 100%;
+      word-break: break-all;
+    }
+    th,td {
+      padding-top: 12px;
+      font-size: 16px;
+      line-height: 1.5;
+      text-align: left;
+    }
+    th {
+      font-family: 'Pretendard';
+      width: 60px;
+      font-weight: bold
+    }
+    td {
+      padding-left: 12px;
+    }
+    a {
+      font-family: 'Pretendard';
+      color: inherit;
+    }
+    @content;
+  }
+}
+@include DetailInfo;
 
 @mixin orderOnline() {
   .orderOnline {
@@ -163,10 +210,20 @@ $s2 : 16px;
     padding: 0 15px;
     margin: 0 auto;
     box-sizing: border-box;
+    &.innerFlex {
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
     @content;
   }
 }
 @include inner;
+// .innerFlex {
+//   .slick-slider {
+//     margin-bottom: 26px;
+//   }
+// }
 .innerFull {
   max-width: 100%;
 }
@@ -224,6 +281,10 @@ $s2 : 16px;
 
 // Header.js
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
   font-size: 24px;
   font-weight: bold;
   background-color: #B1D6DB;
@@ -340,6 +401,22 @@ $s2 : 16px;
   }
 }
 
+@media screen and (max-width:768px) {
+  .dim {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 1;
+    &.ac {
+      display: block;
+    }
+  }
+}
+
 .d-pc {display: block !important}
 .d-mobile {display: none !important}
 @media screen and (max-width:768px) {
@@ -382,6 +459,22 @@ $s2 : 16px;
       right: 0;
     }
   }
+  @media screen and (max-width:768px) {
+    &.ac {
+      display: block !important;
+      position: fixed;
+      top: 96px;
+      left: 16px;
+      right: 16px;
+      input {
+        width: 100%;
+        height: 56px;
+      }
+      .btn {
+        right: 20px;
+      }
+    }
+  }
 }
 
 
@@ -417,6 +510,7 @@ $s2 : 16px;
   h2 {
     font-size: 30px;
     font-weight: bold;
+    line-height: 40px;
     margin-bottom: 8px;
   }
   .subTit {
@@ -476,9 +570,10 @@ $s2 : 16px;
     h2 {
       margin-bottom: 4px;
     }
-    .subTit {
-      margin-bottom: 0;
-    }
+
+    // .subTit {
+    //   margin-bottom: 0;
+    // }
   }
 }
 
@@ -681,35 +776,9 @@ $s2 : 16px;
         background-color: #5AE093;
       }
     }
-
-    .detailInfo {
-      padding-top: 12px;
+    @include DetailInfo {
       margin-top: 28px;
-      border-top: 1px solid #707070;
-      table {
-        table-layout: fixed;
-        width: 100%;
-      }
-      th,td {
-        padding-top: 12px;
-        font-size: 16px;
-        line-height: 1.5;
-        text-align: left;
-      }
-      th {
-        font-family: 'Pretendard';
-        width: 60px;
-        font-weight: bold
-      }
-      td {
-        padding-left: 12px;
-      }
-      a {
-        font-family: 'Pretendard';
-        color: inherit;
-      }
-
-    }
+    };
     @content;
   }
 }
@@ -767,9 +836,6 @@ $s2 : 16px;
   &.contents4 {
     margin-bottom: 80px;
     .inner {
-      display: flex;
-      flex-direction: column;
-      gap: 28px;
       .detailInfo,
       .desc,
       .reactSlick,
@@ -864,18 +930,23 @@ $s2 : 16px;
   }
   .cardWrap {
     display: flex;
+    flex-direction: column;
     gap: 16px;
   }
   .card {
+    border-radius: 16px;
+    padding: 10px;
     display: flex;
     flex-direction: column;
     flex: 1 0 0;
-    border: 1px solid #000;
+    background-color: #EAEAEA;
     box-sizing: border-box;
     min-height: 208px;
     .imgWrap {
       width: 100%;
-      aspect-ratio: 285/210;
+      aspect-ratio: 283/182;
+      border-radius: 12px;
+      overflow: hidden;
       img {
         display: block;
         aspect-ratio: 285/210;
@@ -886,18 +957,26 @@ $s2 : 16px;
     }
     .rightCon {
       flex: 1 0 0;
-      padding: 20px;
+      // padding: 20px;
+      padding-top: 12px;
+      padding-bottom: 10px;
       box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      gap: 30px;
+      gap: 16px;
     }
-    @include keyword;
+    @include keyword {
+      .item {
+        font-weight: 500;
+        line-height: 20px
+      }
+    };
     .conTit {
       font-size: 18px;
+      line-height: 1.5;
       font-weight: bold;
-      margin-bottom: 12px;
+      margin-bottom: 4px;
     }
     .desc {
       font-size: 16px;
@@ -905,6 +984,63 @@ $s2 : 16px;
     }
   }
 }
+
+// recommend 백업
+// .recommend {
+//   margin-top: 80px;
+//   margin-bottom: 230px;
+//   .tit {
+//     padding-top: 32px;
+//     border-top: 1px solid #707070;
+//     width: 100%;
+//     font-size: 20px;
+//     font-weight: bold;
+//     line-height: 1.4;
+//     margin-bottom: 28px;
+//   }
+//   .cardWrap {
+//     display: flex;
+//     gap: 16px;
+//   }
+//   .card {
+//     display: flex;
+//     flex-direction: column;
+//     flex: 1 0 0;
+//     border: 1px solid #000;
+//     box-sizing: border-box;
+//     min-height: 208px;
+//     .imgWrap {
+//       width: 100%;
+//       aspect-ratio: 285/210;
+//       img {
+//         display: block;
+//         aspect-ratio: 285/210;
+//         width: 100%;
+//         height: 100%;
+//         object-fit: cover;
+//       }
+//     }
+//     .rightCon {
+//       flex: 1 0 0;
+//       padding: 20px;
+//       box-sizing: border-box;
+//       display: flex;
+//       flex-direction: column;
+//       justify-content: space-between;
+//       gap: 30px;
+//     }
+//     @include keyword;
+//     .conTit {
+//       font-size: 18px;
+//       font-weight: bold;
+//       margin-bottom: 12px;
+//     }
+//     .desc {
+//       font-size: 16px;
+//       line-height: 1.5;
+//     }
+//   }
+// }
 
 .article3 {
   margin-top: 80px;
@@ -1626,6 +1762,40 @@ body:has(.mainBg) {
       a {
         color: inherit;
       }
+    }
+  }
+}
+
+.oldAndNew {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  table {
+    text-align: center;
+    table-layout: fixed;
+    width: 100%;
+    th {
+      padding: 5px;
+      border: 1px solid #000;
+      font-size: 14px;
+      font-weight: 600;
+    }
+    td {
+      padding: 17px;
+      border: 1px solid #000;
+      font-size: 18px;
+
+    }
+  }
+  .old {
+    th {
+      background-color: #CBCBCB;
+    }
+  }
+  .new {
+    th {
+      background-color: #FFDB43;
     }
   }
 }

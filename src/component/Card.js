@@ -4,7 +4,7 @@ function Card({card='card',keyword, h3, p, img}) {
         <div className={card}>
             <div className='imgWrap'>
                 <img src={img} alt='img'/>
-                <div class="badgeWrap">
+                <div className="badgeWrap">
                     <i className='badge kiz'></i>
                 </div>
             </div>

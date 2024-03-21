@@ -25,6 +25,7 @@ import Page9 from './screens/Page9';
 import Page10 from './screens/Page10';
 import Page11 from './screens/Page11';
 import Page12 from './screens/Page12';
+import Page13 from './screens/Page13';
 
 function App() {
   return (
@@ -56,6 +57,7 @@ function App() {
         <Route path='/Page10' Component={Page10} exact />
         <Route path='/Page11' Component={Page11} exact />
         <Route path='/Page12' Component={Page12} exact />
+
       </Routes>
     </div>
   );

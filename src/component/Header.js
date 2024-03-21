@@ -2,12 +2,23 @@ import React, {useState} from 'react';
 import Search from './Search';
 
 function Header() {
+    // side 메뉴 on/off
     const [status, setStatus] = useState('')
     const sideOpen = () => {
         setStatus('ac')
     }
-    const sideClose = () => {
-        setStatus('')
+    const sideClose = (e) => {
+        if(e.target.className === 'offcanvas ac') {
+            setStatus('')
+        } else if(e.target.className === 'close') {
+            setStatus('')
+        }
+    }
+
+    // 모바일 검색창 on/off
+    const [search, setSearch] = useState('')
+    const searchTrigger = () => {
+        search === '' ? setSearch('ac') : setSearch('')
     }
     return <>
         <header className='header'>
@@ -16,10 +27,17 @@ function Header() {
                     <div className='hamburger' onClick={sideOpen}></div>
                     <div className='tit'>SEOGWIPO TIMES</div>
                 </div>
-                <Search />
+                {/* <Search /> */}
+                <div className={`search d-pc ${search}`}>
+                    <input type='text' placeholder='검색어를 입력하세요' />
+                    <button className='btn'>검색</button>    
+                </div>
+                <div className="search d-mobile">
+                    <button className='btn' onClick={searchTrigger}>검색</button>    
+                </div>
             </div>
         </header>
-        <div className={`offcanvas ${status}`}>
+        <div className={`offcanvas ${status}`} onClick={sideClose}>
             <div className='sideMenu'>
                 <div className='close' onClick={sideClose}>X</div>
                 <div className='tit'>
@@ -42,7 +60,7 @@ function Header() {
                 </div>
             </div>
         </div>
-
+        <div className={`dim ${search}`} onClick={searchTrigger}></div>
     </>
 }
 

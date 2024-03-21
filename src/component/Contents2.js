@@ -15,14 +15,14 @@ function Contents2({
                     <div className={`tag ${obs}`}>장애</div>
                 </div>
 
-                <div class="imgWrap">
+                <div className="imgWrap">
                     <img src={img1} />
                     <div className='caption'>{caption1}</div>
                 </div>
 
                 <p className='desc'>{desc1}</p>
 
-                <div class="imgWrap">
+                <div className="imgWrap">
                     <img src={img2} />
                     <div className='caption'>{caption2}</div>
                 </div>

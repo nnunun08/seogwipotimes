@@ -44,6 +44,7 @@ function Home() {
             <li style={li}><Link to='/Page10'>힙하게 변했어요, 공간의 재탄생</Link></li>
             <li style={li}><Link to='/Page11'>2023 문화도시 서귀포가 남긴 것 BEST 6</Link></li>
             <li style={li}><Link to='/Page12'>걸음마다 짭조름하게, 송산서귀마을</Link></li>
+
         </ul>
     ) 
 }

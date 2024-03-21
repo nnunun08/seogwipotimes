@@ -94,8 +94,51 @@ body {
   min-width: 360px;
 }
 
+.slick-slide img {
+  width: 100%;
+}
+
+.conTit {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.desc {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 2;
+}
+
 .displayNone {
   display: none !important;
+}
+
+.detailInfo {
+  padding-top: 12px;
+  border-top: 1px solid #707070;
+}
+.detailInfo table {
+  table-layout: fixed;
+  width: 100%;
+  word-break: break-all;
+}
+.detailInfo th, .detailInfo td {
+  padding-top: 12px;
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+.detailInfo th {
+  font-family: "Pretendard";
+  width: 60px;
+  font-weight: bold;
+}
+.detailInfo td {
+  padding-left: 12px;
+}
+.detailInfo a {
+  font-family: "Pretendard";
+  color: inherit;
 }
 
 .inner {
@@ -103,6 +146,11 @@ body {
   padding: 0 15px;
   margin: 0 auto;
   box-sizing: border-box;
+}
+.inner.innerFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 
 .innerFull {
@@ -115,6 +163,11 @@ body {
   margin: 0 auto;
   box-sizing: border-box;
   max-width: 410px;
+}
+.inner380 .inner.innerFlex {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
 }
 .inner380 .article1 h2 {
   font-size: 30px;
@@ -142,6 +195,10 @@ body {
 }
 
 .header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 2;
   font-size: 24px;
   font-weight: bold;
   background-color: #B1D6DB;
@@ -258,6 +315,21 @@ body {
   font-size: 16px;
 }
 
+@media screen and (max-width: 768px) {
+  .dim {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+  .dim.ac {
+    display: block;
+  }
+}
 .d-pc {
   display: block !important;
 }
@@ -311,6 +383,22 @@ body {
 .search.d-mobile .btn {
   right: 0;
 }
+@media screen and (max-width: 768px) {
+  .search.ac {
+    display: block !important;
+    position: fixed;
+    top: 96px;
+    left: 16px;
+    right: 16px;
+  }
+  .search.ac input {
+    width: 100%;
+    height: 56px;
+  }
+  .search.ac .btn {
+    right: 20px;
+  }
+}
 
 .article1 {
   transition: 0.3s;
@@ -359,6 +447,7 @@ body {
 .article1 h2 {
   font-size: 30px;
   font-weight: bold;
+  line-height: 40px;
   margin-bottom: 8px;
 }
 .article1 .subTit {
@@ -419,9 +508,6 @@ body {
   }
   .article1 h2 {
     margin-bottom: 4px;
-  }
-  .article1 .subTit {
-    margin-bottom: 0;
   }
 }
 
@@ -626,12 +712,13 @@ body {
 }
 .contents .detailInfo {
   padding-top: 12px;
-  margin-top: 28px;
   border-top: 1px solid #707070;
+  margin-top: 28px;
 }
 .contents .detailInfo table {
   table-layout: fixed;
   width: 100%;
+  word-break: break-all;
 }
 .contents .detailInfo th, .contents .detailInfo td {
   padding-top: 12px;
@@ -845,12 +932,13 @@ body {
 }
 .contents .detailInfo {
   padding-top: 12px;
-  margin-top: 28px;
   border-top: 1px solid #707070;
+  margin-top: 28px;
 }
 .contents .detailInfo table {
   table-layout: fixed;
   width: 100%;
+  word-break: break-all;
 }
 .contents .detailInfo th, .contents .detailInfo td {
   padding-top: 12px;
@@ -1048,12 +1136,13 @@ body {
 }
 .contents .detailInfo {
   padding-top: 12px;
-  margin-top: 28px;
   border-top: 1px solid #707070;
+  margin-top: 28px;
 }
 .contents .detailInfo table {
   table-layout: fixed;
   width: 100%;
+  word-break: break-all;
 }
 .contents .detailInfo th, .contents .detailInfo td {
   padding-top: 12px;
@@ -1075,11 +1164,6 @@ body {
 }
 .contents.contents4 {
   margin-bottom: 80px;
-}
-.contents.contents4 .inner {
-  display: flex;
-  flex-direction: column;
-  gap: 28px;
 }
 .contents.contents4 .inner .detailInfo,
 .contents.contents4 .inner .desc,
@@ -1249,12 +1333,13 @@ body {
 }
 .contents .detailInfo {
   padding-top: 12px;
-  margin-top: 28px;
   border-top: 1px solid #707070;
+  margin-top: 28px;
 }
 .contents .detailInfo table {
   table-layout: fixed;
   width: 100%;
+  word-break: break-all;
 }
 .contents .detailInfo th, .contents .detailInfo td {
   padding-top: 12px;
@@ -1366,19 +1451,24 @@ body {
 }
 .recommend .cardWrap {
   display: flex;
+  flex-direction: column;
   gap: 16px;
 }
 .recommend .card {
+  border-radius: 16px;
+  padding: 10px;
   display: flex;
   flex-direction: column;
   flex: 1 0 0;
-  border: 1px solid #000;
+  background-color: #EAEAEA;
   box-sizing: border-box;
   min-height: 208px;
 }
 .recommend .card .imgWrap {
   width: 100%;
-  aspect-ratio: 285/210;
+  aspect-ratio: 283/182;
+  border-radius: 12px;
+  overflow: hidden;
 }
 .recommend .card .imgWrap img {
   display: block;
@@ -1390,12 +1480,13 @@ body {
 }
 .recommend .card .rightCon {
   flex: 1 0 0;
-  padding: 20px;
+  padding-top: 12px;
+  padding-bottom: 10px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 30px;
+  gap: 16px;
 }
 .recommend .card .keyword {
   display: flex;
@@ -1435,10 +1526,15 @@ body {
 .recommend .card .keyword .item.SPACE {
   background-color: #A7E8F4;
 }
+.recommend .card .keyword .item {
+  font-weight: 500;
+  line-height: 20px;
+}
 .recommend .card .conTit {
   font-size: 18px;
+  line-height: 1.5;
   font-weight: bold;
-  margin-bottom: 12px;
+  margin-bottom: 4px;
 }
 .recommend .card .desc {
   font-size: 16px;
@@ -2309,4 +2405,33 @@ body:has(.mainBg) {
 }
 .article5 .titWrap p a {
   color: inherit;
+}
+
+.oldAndNew {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+.oldAndNew table {
+  text-align: center;
+  table-layout: fixed;
+  width: 100%;
+}
+.oldAndNew table th {
+  padding: 5px;
+  border: 1px solid #000;
+  font-size: 14px;
+  font-weight: 600;
+}
+.oldAndNew table td {
+  padding: 17px;
+  border: 1px solid #000;
+  font-size: 18px;
+}
+.oldAndNew .old th {
+  background-color: #CBCBCB;
+}
+.oldAndNew .new th {
+  background-color: #FFDB43;
 }/*# sourceMappingURL=index.css.map */

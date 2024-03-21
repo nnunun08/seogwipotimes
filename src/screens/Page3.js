@@ -21,7 +21,7 @@ function Page3() {
                 p = {'기억해요. 계절은 바뀌고 당신은 매일 새로운 날을 선물 받고 있음을.'}
                 img = {
                     <>
-                        <div className='keyImg' style={imgMargin}><img src='/img/img_14.jpg' alt="img" /></div>
+                        <div className='keyImg'><img src='/img/img_14.jpg' alt="img" /></div>
                     </>
                 }
                 tit = {'서귀포 체험 끝판왕 사용법'}

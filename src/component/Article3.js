@@ -13,7 +13,7 @@ function Article3({em, tit, img, p, location, url , btn}) {
                 <p>{p}</p>
                 <div className='location'>{location}</div>
 
-                <div class="orderOnline"><a href={url} target="_blank"><div class="orderBtn">{btn}</div></a></div>
+                <div className="orderOnline"><a href={url} target="_blank"><div className="orderBtn">{btn}</div></a></div>
             </div>
         </div>
     </>)

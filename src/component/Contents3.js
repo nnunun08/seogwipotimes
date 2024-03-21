@@ -6,7 +6,7 @@ function Contents3({num, conTit, img, desc}) {
             <div className='inner'>
                 <em>{num}</em>
                 <div className='conTit'>{conTit}</div>
-                <div class="imgWrap">
+                <div className="imgWrap">
                     <img src={img} alt=''/>
                 </div>
                 <p className='desc'>{desc}</p>
