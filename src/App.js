@@ -57,6 +57,7 @@ function App() {
         <Route path='/Page10' Component={Page10} exact />
         <Route path='/Page11' Component={Page11} exact />
         <Route path='/Page12' Component={Page12} exact />
+        <Route path='/Page13' Component={Page13} exact />
 
       </Routes>
     </div>

@@ -86,8 +86,8 @@ input[type=number]::-webkit-outer-spin-button {
 
 
 html {
-  font-family: "Montserrat", "Pretendard", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, HelveticaNeue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
-  color: #000000;
+  font-family: "Pretendard", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, HelveticaNeue, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji;
+  color: #000;
 }
 
 body {
@@ -108,9 +108,25 @@ body {
   font-weight: 400;
   line-height: 2;
 }
+.desc a {
+  color: inherit;
+}
 
 .displayNone {
   display: none !important;
+}
+
+.imgWrap {
+  text-align: right;
+}
+.imgWrap img {
+  display: block;
+  width: 100%;
+}
+.imgWrap .caption {
+  font-size: 12px;
+  color: #707070;
+  margin-top: 4px;
 }
 
 .detailInfo {
@@ -151,6 +167,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  margin-top: 80px;
+  margin-bottom: 110px;
 }
 
 .innerFull {
@@ -168,6 +186,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 28px;
+  margin-top: 80px;
+  margin-bottom: 110px;
 }
 .inner380 .article1 h2 {
   font-size: 30px;
@@ -228,6 +248,7 @@ body {
   transition: 0.3s;
 }
 .header .tit {
+  font-family: "Montserrat";
   font-weight: 800;
 }
 @media screen and (max-width: 768px) {
@@ -275,6 +296,7 @@ body {
   cursor: pointer;
 }
 .offcanvas .sideMenu .tit {
+  font-family: "Montserrat";
   padding-top: 120px;
   padding-left: 30px;
   font-size: 36px;
@@ -412,6 +434,7 @@ body {
   margin-bottom: 24px;
 }
 .article1 .keyword .item {
+  font-family: "Montserrat";
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
@@ -558,6 +581,7 @@ body {
   text-align: right;
 }
 .contents .imgWrap img {
+  display: block;
   width: 100%;
 }
 .contents .imgWrap .caption {
@@ -778,6 +802,7 @@ body {
   text-align: right;
 }
 .contents .imgWrap img {
+  display: block;
   width: 100%;
 }
 .contents .imgWrap .caption {
@@ -982,6 +1007,7 @@ body {
   text-align: right;
 }
 .contents .imgWrap img {
+  display: block;
   width: 100%;
 }
 .contents .imgWrap .caption {
@@ -1179,6 +1205,7 @@ body {
   text-align: right;
 }
 .contents .imgWrap img {
+  display: block;
   width: 100%;
 }
 .contents .imgWrap .caption {
@@ -1494,6 +1521,7 @@ body {
   gap: 8px;
 }
 .recommend .card .keyword .item {
+  font-family: "Montserrat";
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
@@ -1802,6 +1830,7 @@ body {
   gap: 8px;
 }
 .cardView .card .keyword .item {
+  font-family: "Montserrat";
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
@@ -1892,6 +1921,7 @@ body {
   flex-wrap: nowrap;
 }
 .tab .keyword .item {
+  font-family: "Montserrat";
   font-size: 18px;
   font-weight: 600;
   line-height: 19px;
@@ -2179,6 +2209,7 @@ body:has(.mainBg) {
   gap: 8px;
 }
 .mainContents .keyword .item {
+  font-family: "Montserrat";
   font-size: 14px;
   font-weight: 600;
   line-height: 19px;
