@@ -40,7 +40,6 @@ function Page11() {
                 </>
             }
         />
-
         <Contents5
             em = {`사랑방 혹은 아지트란 이름으로`}
             tit = {`BEST1 [마을라운지]`}

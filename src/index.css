@@ -100,6 +100,7 @@ body {
 
 .conTit {
   font-size: 20px;
+  line-height: 1.4;
   font-weight: bold;
 }
 
@@ -111,9 +112,73 @@ body {
 .desc a {
   color: inherit;
 }
+.desc b {
+  font-weight: bold;
+}
+.desc b.red {
+  color: #FF7D72;
+}
+.desc b.blue {
+  color: #558EFF;
+}
+
+.flexColumn4 {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.flexColumn8 {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flexColumn20 {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flexColumn36 {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.flexColumn80 {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+}
+.flexColumn80 .innerFlex {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
 
 .displayNone {
   display: none !important;
+}
+
+.gap12 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.blueLink {
+  min-width: 223px;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 100px;
+  border: 1px solid #000;
+  box-sizing: border-box;
+  background-color: #81C0FF;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  color: #000;
+  text-decoration: none;
 }
 
 .imgWrap {
@@ -158,6 +223,8 @@ body {
 }
 
 .inner {
+  box-sizing: border-box;
+  width: 100%;
   max-width: 616px;
   padding: 0 15px;
   margin: 0 auto;
@@ -176,6 +243,8 @@ body {
 }
 
 .inner380 .inner {
+  box-sizing: border-box;
+  width: 100%;
   max-width: 616px;
   padding: 0 15px;
   margin: 0 auto;
@@ -1751,6 +1820,9 @@ body {
   font-weight: bold;
   margin-bottom: 28px;
 }
+.contents3 h3.blue {
+  color: #3198FF;
+}
 .contents3 h4 {
   font-size: 20px;
   line-height: 1.4;
@@ -2465,4 +2537,143 @@ body:has(.mainBg) {
 }
 .oldAndNew .new th {
   background-color: #FFDB43;
+}
+
+.profileCardWrap {
+  display: flex;
+  gap: 4px;
+  margin-top: -32px;
+}
+.profileCardWrap .profileCard {
+  text-align: center;
+  border: 1px solid #000;
+  font-size: 16px;
+  line-height: 1.5;
+  flex: 1 0 0;
+  padding-top: 16px;
+  box-sizing: border-box;
+}
+.profileCardWrap .profileCard.red {
+  background-color: #FF9F9F;
+}
+.profileCardWrap .profileCard.blue {
+  background-color: #9BBEFF;
+}
+.profileCardWrap .profileCard em {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+.profileCardWrap .profileCard h4 {
+  font-size: 20px;
+  font-weight: 700;
+}
+.profileCardWrap .profileCard img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+.profileCardWrap .profileCard ul {
+  padding: 15px;
+  text-align: left;
+}
+.profileCardWrap .profileCard ul li {
+  position: relative;
+  padding-left: 16px;
+}
+.profileCardWrap .profileCard ul li::before {
+  content: "";
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: #000;
+  position: absolute;
+  top: 9px;
+  left: 0;
+}
+.profileCardWrap .profileCard ul li + li {
+  margin-top: 16px;
+}
+
+.pushContents {
+  text-align: center;
+  font-size: 18px;
+  line-height: 28px;
+}
+.pushContents.top {
+  padding-top: 36px;
+  border-top: 1px solid #000;
+  margin-bottom: 48px;
+}
+
+.yellowLink {
+  display: inline-block;
+  padding: 8px 12px;
+  border: 1px solid #000;
+  border-radius: 50px;
+  background-color: #FFDB43;
+  width: 223px;
+  font-size: 16px;
+  line-height: 1;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  color: #000;
+  margin: 0 auto;
+}
+
+.interviewFooter {
+  width: 100%;
+  text-align: right;
+}
+.interviewFooter .conBx {
+  border-top: 1px solid #000;
+  padding-top: 24px;
+}
+
+.greenBaseWrap .conTit {
+  font-size: 24px;
+}
+.greenBaseWrap p {
+  font-size: 18px;
+  line-height: 28px;
+}
+
+.greenBase {
+  color: #fff;
+  padding: 20px;
+  padding-bottom: 36px;
+  background-color: #0B965B;
+}
+.greenBase p {
+  font-size: 20px;
+}
+.greenBase h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 24px;
+}
+.greenBase .infoImg {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.greenBase .infoImg img {
+  border-radius: 16px;
+}
+.greenBase .linkWrap {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 28px;
+}
+.greenBase .whiteLink {
+  display: inline-block;
+  background-color: #fff;
+  padding: 8px 12px;
+  color: #0A965B;
+  font-size: 16px;
+  border-radius: 100px;
+  margin: 0 auto;
+  text-decoration: none;
 }/*# sourceMappingURL=index.css.map */

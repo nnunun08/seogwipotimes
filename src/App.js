@@ -26,6 +26,11 @@ import Page10 from './screens/Page10';
 import Page11 from './screens/Page11';
 import Page12 from './screens/Page12';
 import Page13 from './screens/Page13';
+import Page14 from './screens/Page14';
+import Page15 from './screens/Page15';
+import Page16 from './screens/Page16';
+import Page17 from './screens/Page17';
+import Page18 from './screens/Page18';
 
 function App() {
   return (
@@ -58,6 +63,11 @@ function App() {
         <Route path='/Page11' Component={Page11} exact />
         <Route path='/Page12' Component={Page12} exact />
         <Route path='/Page13' Component={Page13} exact />
+        <Route path='/Page14' Component={Page14} exact />
+        <Route path='/Page15' Component={Page15} exact />
+        <Route path='/Page16' Component={Page16} exact />
+        <Route path='/Page17' Component={Page17} exact />
+        <Route path='/Page18' Component={Page18} exact />
 
       </Routes>
     </div>

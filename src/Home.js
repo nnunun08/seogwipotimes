@@ -33,6 +33,11 @@ function Home() {
             <li style={li}><Link to='/Page11'>2023 문화도시 서귀포가 남긴 것 BEST 6</Link></li>
             <li style={li}><Link to='/Page12'>걸음마다 짭조름하게, 송산서귀마을</Link></li>
             <li style={li}><Link to='/Page13'>지구는 누가 지키나? 내가!</Link></li>
+            <li style={li}><Link to='/Page14'>대정에서 온 남자, 성산에서 온 여자 part1.서귀포에 취한 젊음의 기록</Link></li>
+            <li style={li}><Link to='/Page15'>대정에서 온 남자, 성산에서 온 여자 part2.우리 마을로 들어와, ‘드루와’!</Link></li>
+            <li style={li}><Link to='/Page16'>흐려도 분위기, 신례1리ㆍ신례2리마을</Link></li>
+            <li style={li}><Link to='/Page17'>우리 이렇게 잘했어요, 숫자로 보는 2023 문화도시 서귀포</Link></li>
+            <li style={li}><Link to='/Page18'>띵동! 서귀포 3~4월 캘린더</Link></li>
             <br/><br/>
             <li style={li}><Link to='/Place1'>메뉴_서귀포의 숨은 소식과</Link></li>
             <li style={li}><Link to='/Place2'>메뉴_노지 이야기를 즐기니</Link></li>

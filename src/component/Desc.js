@@ -1,7 +1,7 @@
 import React from "react";
-function Desc({text}) {
+function Desc({name, text}) {
     return(
-        <p className='desc'>{text}</p>
+        <p className='desc'>{name}{text}</p>
     )
 }
 export default Desc;
